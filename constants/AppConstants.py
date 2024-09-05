@@ -1,12 +1,14 @@
 STANDARD_USER = "standard_user"
 STANDARD_PASSWORD = "secret_sauce"
-LOCKED_OUT_USER = "invalid_user"
-URL = "https://www.saucedemo.com"
+LOCKED_OUT_USER = "locked_out_user"
+INVALID_USER = "standard_user_one"
+URL = "https://www.saucedemo.com/"
 INVENTORY_URL = "https://www.saucedemo.com/inventory.html"
 LOW_TO_HIGH = "Price (low to high)"
 HIGH_TO_LOW = "Price (high to low)"
 PRODUCT_LANDING_PAGE_TITLE = "Products"
-ERROR_LOGIN_FAILED = "Epic sadface: Username and password do not match any user in this service"
+LOCKED_OUT_USER_LOGIN_FAILED = "Epic sadface: Sorry, this user has been locked out."
+INVALID_USER_LOGIN_FAILED = "Epic sadface: Username and password do not match any user in this service"
 DEFAULT_WAIT = 10
 SHORT_WAIT = 5
 LONG_WAIT = 20

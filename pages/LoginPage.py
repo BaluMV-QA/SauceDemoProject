@@ -10,6 +10,7 @@ class LoginPage(ElementUtil):
         self.username = (By.ID, "user-name")
         self.password = (By.ID, "password")
         self.login_button = (By.ID, "login-button")
+        self.error_message = (By.XPATH, '//h3[@data-test="error"]')
 
     def input_username(self, username):
         """ Enter a username into the username textbox. """
@@ -28,3 +29,33 @@ class LoginPage(ElementUtil):
         self.input_username(username)
         self.input_password(password)
         self.click_on_login_button()
+
+    def get_error_message(self):
+        """
+        Get the error message if username/password is incorrect.
+        :return: error message on Login failed
+        """
+        return self.get_text_of_element(self.error_message)
+
+    def get_current_url(self):
+        """
+        Get the url of the Login page
+        :return: url
+        """
+        return self.driver.current_url
+
+    def check_if_username_field_is_displayed(self):
+        """
+        To check if username text field is displayed
+        :return: True if element is displayed
+        """
+        return self.element_displayed(self.username)
+
+    def check_if_password_field_is_displayed(self):
+        """
+        To check if password text field is displayed
+        :return: True if element is displayed
+        """
+        return self.element_displayed(self.password)
+
+

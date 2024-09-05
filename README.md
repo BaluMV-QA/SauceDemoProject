@@ -20,3 +20,12 @@
 
 ## Installation command
 pip install -r requirements.txt
+
+## Command to run all tests
+python -m pytest --alluredir allure-results
+
+## Command to run individual test
+pytest tests/test_login.py
+
+## Command to check allure report
+allure serve allure-results

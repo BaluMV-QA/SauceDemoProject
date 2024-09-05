@@ -13,6 +13,8 @@ class ProductListingPage(ElementUtil):
         self.products_price = (By.CLASS_NAME, "inventory_item_price")
         self.sort_dropdown = (By.CLASS_NAME, "product_sort_container")
         self.mini_cart = (By.CLASS_NAME, "shopping_cart_link")
+        self.burger_menu = (By.ID,"react-burger-menu-btn")
+        self.logout_link = (By.ID,"logout_sidebar_link")
 
     def get_title(self):
         """
@@ -75,3 +77,15 @@ class ProductListingPage(ElementUtil):
         Click on mini cart, user navigated to cart page
         """
         self.click_on_element(self.mini_cart)
+
+    def click_on_burger_menu(self):
+        """
+        Click on burger menu
+        """
+        self.click_on_element(self.burger_menu)
+
+    def click_on_logout_link(self):
+        """
+        Click on logout link
+        """
+        self.click_on_element(self.logout_link)

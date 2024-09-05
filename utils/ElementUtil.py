@@ -88,3 +88,11 @@ class ElementUtil:
         """
         wait = WebDriverWait(self.driver, AppConstants.DEFAULT_WAIT, poll_frequency=2, ignored_exceptions=[Exception])
         wait.until(ec.presence_of_element_located(wait_locator))
+
+    def element_displayed(self, locator: Locator):
+        """
+        To check if element is displayed
+        :param locator: The locator of the element
+        :return: true or false,true is element is displayed if not false
+        """
+        return self.driver.find_element(*locator).is_displayed()
